@@ -1,44 +1,73 @@
-body {
-  font-family: 'Inter', sans-serif;
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+:root{
+  --bg:#0b0c10;
+  --card:#12141a;
+  --text:#e6e6e6;
+  --muted:#a9b0bc;
+  --accent:#5cc8ff;
+  --rule:#1e232d;
 }
 
-h1, h2, h3 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3em;
+html,body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--text);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,
+       "Apple Color Emoji","Segoe UI Emoji";
 }
 
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 1rem 0;
+a{ color:var(--accent); text-decoration:none }
+a:hover{ text-decoration:underline }
+
+.wrap{ max-width:980px; margin:0 auto; padding:32px 20px }
+
+header{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px; margin-bottom:22px }
+header h1{ font-size:28px; line-height:1.2; margin:0 }
+header .meta{ color:var(--muted) }
+.desc{ margin-top:4px; color:var(--muted) }
+
+/* セクション共通 */
+section{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:14px;
+  padding:18px 18px 8px;
+  margin:16px 0;
+}
+section h2{
+  font-size:18px; letter-spacing:.02em; margin:0 0 12px 0;
+  border-left:3px solid var(--accent); padding-left:10px;
 }
 
-ul {
-  padding-left: 1.2rem;
+/* 項目共通 */
+.item-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px }
+.item{
+  display:grid; grid-template-columns:1fr auto;
+  gap:6px 14px; padding:10px; border-radius:10px; border:1px solid transparent;
 }
+.item:hover{ border-color:var(--rule); background:rgba(255,255,255,0.02) }
 
-ul li {
-  margin-bottom: 0.6rem;
+.item .title{ font-weight:600 }
+.item .title .label{
+  display:inline-block; font-size:12px; font-weight:600;
+  color:#0b1b22; background:#89d8ff24; border:1px solid #89d8ff44;
+  padding:2px 6px; border-radius:999px; margin-left:8px; vertical-align:2px;
 }
+.item .meta{ color:var(--muted); white-space:nowrap }
+.item .sub{ grid-column:1/-1; color:var(--muted) }
+.item .body{ grid-column:1/-1; margin-top:2px }
 
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
+.tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px }
+.tag{ font-size:12px; color:var(--muted); border:1px solid var(--rule); padding:2px 8px; border-radius:999px }
 
-a:hover {
-  text-decoration: underline;
-}
+/* 数字の桁揃え用 */
+.mono{ font-variant-numeric:tabular-nums }
 
-.contact {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: #555;
+/* 区切り線・フッタ */
+hr{ height:1px; border:0; background:var(--rule); margin:24px 0 }
+footer{ color:var(--muted); text-align:center; padding:18px 0 }
+
+/* スマホ最適化 */
+@media (max-width:640px){
+  .item{ grid-template-columns:1fr }
+  .item .meta{ order:2 }
 }
 
