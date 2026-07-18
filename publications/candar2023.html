@@ -1,94 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI</title>
-
-<meta name="citation_title"
-      content="On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI">
-
-<meta name="citation_author" content="Maki Tsukahara">
-<meta name="citation_author" content="Haruka Hirata">
-<meta name="citation_author" content="Mingyu Yang">
-<meta name="citation_author" content="Daiki Miyahara">
-<meta name="citation_author" content="Yang Li">
-<meta name="citation_author" content="Yuko Hara-Azumi">
-<meta name="citation_author" content="Kazuo Sakiyama">
-
-<meta name="citation_publication_date" content="2023/11">
-<meta name="citation_conference_title"
-      content="2023 Eleventh International Symposium on Computing and Networking Workshops (CANDARW)">
-
-<meta name="citation_firstpage" content="286">
-<meta name="citation_lastpage" content="291">
-<meta name="citation_doi" content="10.1109/CANDARW60564.2023.00054">
-
-<meta name="citation_pdf_url"
-      content="https://www.ykm11.phd/papers/CANDARW2023_submitted_ver.pdf">
-
-<meta name="citation_fulltext_world_readable" content="">
-
-<link rel="canonical"
-      href="https://www.ykm11.phd/publications/candar2023.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI</title>
+  <meta name="description" content="Physical attacks on cryptographic hardware have become a significant threat in recent years. For example, side-channel attacks exploit information leakage, such as power consumption or processing time during encryption, to recover the secret key. Threshold implementation (TI) is a widely used countermeasure against such attacks. In the conventional implementation of TI, the significant process for ensuring an important property called uniformity is refreshing, which re-masks intermediate values using many random bits. In this study, we demonstrate that side-channel information leaks when fresh randomness is not sufficient even if a cryptographically secure Pseudo Random Number Generator (PRNG) is appropriately implemented. More precisely, our experimental results show such leakage when the seed value given to the PRNG remains fixed for every encryption, or when the update of fresh random bits is stopped in the encryption.">
+  <meta name="robots" content="index,follow">
+  <meta name="citation_title" content="On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI">
+  <meta name="citation_author" content="Maki Tsukahara">
+  <meta name="citation_author" content="Haruka Hirata">
+  <meta name="citation_author" content="Mingyu Yang">
+  <meta name="citation_author" content="Daiki Miyahara">
+  <meta name="citation_author" content="Yang Li">
+  <meta name="citation_author" content="Yuko Hara-Azumi">
+  <meta name="citation_author" content="Kazuo Sakiyama">
+  <meta name="citation_publication_date" content="2023/11/27">
+  <meta name="citation_conference_title" content="2023 Eleventh International Symposium on Computing and Networking Workshops (CANDARW)">
+  <meta name="citation_firstpage" content="286">
+  <meta name="citation_lastpage" content="291">
+  <meta name="citation_doi" content="10.1109/CANDARW60564.2023.00054">
+  <meta name="citation_isbn" content="979-8-3503-0694-1">
+  <meta name="citation_pdf_url" content="https://www.ykm11.phd/publications/CANDARW2023_submitted_ver.pdf">
+  <link rel="canonical" href="https://www.ykm11.phd/publications/candar2023.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../penguin_32x32.png" type="image/png" sizes="32x32">
 </head>
-
 <body>
-<h1>On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI</h1>
+  <main class="wrap">
+    <article class="paper">
+      <nav class="paper-nav" aria-label="Breadcrumb">
+        <a href="../index.html#conference">← Conference proceedings</a>
+      </nav>
 
-<p>
-<strong>Authors:</strong>
-Maki Tsukahara, Haruka Hirata, Mingyu Yang, Daiki Miyahara,
-Yang Li, Yuko Hara-Azumi, Kazuo Sakiyama
-</p>
+      <h1 class="citation_title">On the Practical Dependency of Fresh Randomness in AES S-box with Second-Order TI</h1>
+      <h3 class="citation_author">Maki Tsukahara, Haruka Hirata, Mingyu Yang, Daiki Miyahara, Yang Li, Yuko Hara-Azumi, Kazuo Sakiyama</h3>
+      <p class="paper-citation">CANDARW 2023, Matsue, Japan, pp. 286–291. DOI: <a href="https://doi.org/10.1109/CANDARW60564.2023.00054">10.1109/CANDARW60564.2023.00054</a>.</p>
 
-<p>
-<strong>Venue:</strong>
-2023 Eleventh International Symposium on Computing and Networking Workshops
-(CANDARW 2023)
-</p>
+      <dl class="paper-meta">
+        <div><dt>Conference</dt><dd>2023 Eleventh International Symposium on Computing and Networking Workshops (CANDARW)</dd></div>
+        <div><dt>Conference / publication date</dt><dd>27–30 November 2023</dd></div>
+        <div><dt>Pages</dt><dd>286–291</dd></div>
+          <div><dt>ISBN</dt><dd>979-8-3503-0694-1</dd></div>
+      </dl>
 
-<p><strong>Publication date:</strong> November 2023</p>
+      <section aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p>Physical attacks on cryptographic hardware have become a significant threat in recent years. For example, side-channel attacks exploit information leakage, such as power consumption or processing time during encryption, to recover the secret key. Threshold implementation (TI) is a widely used countermeasure against such attacks. In the conventional implementation of TI, the significant process for ensuring an important property called uniformity is refreshing, which re-masks intermediate values using many random bits. In this study, we demonstrate that side-channel information leaks when fresh randomness is not sufficient even if a cryptographically secure Pseudo Random Number Generator (PRNG) is appropriately implemented. More precisely, our experimental results show such leakage when the seed value given to the PRNG remains fixed for every encryption, or when the update of fresh random bits is stopped in the encryption.</p>
+      </section>
 
-<p><strong>Pages:</strong> 286&ndash;291</p>
-
-<p>
-<strong>DOI:</strong>
-<a href="https://doi.org/10.1109/CANDARW60564.2023.00054">
-10.1109/CANDARW60564.2023.00054
-</a>
-</p>
-
-<p>
-Conference paper presented at CANDARW 2023, Matsue, Japan.
-</p>
-
-<h2>Abstract</h2>
-
-<p>
-Physical attacks on cryptographic hardware have become a significant threat in recent years. For example, side-channel attacks exploit
-information leakage, such as power consumption or processing time during encryption, to recover the secret key. Threshold implementation
-(TI) is a widely used countermeasure against such attacks. 
-In the conventional implementation of TI, the significant process for ensuring an important property called uniformity is refreshing, which re-masks intermediate values using many random bits. 
-In this study, we demonstrate that side-channel information leaks when fresh randomness is not sufficient even if a cryptographically secure Pseudo Random Number Generator (PRNG) is appropriately implemented. More precisely, our experimental results show such leakage when the seed value given to the PRNG remains fixed for every encryption, or when the update of fresh
-random bits is stopped in the encryption.
-</p>
-
-<p>
-<a href="https://ieeexplore.ieee.org/document/10409832">
-IEEE Xplore
-</a>
-</p>
-
-<p>
-<a href="https://www.ykm11.phd/papers/CANDARW2023_submitted_ver.pdf">
-Download PDF
-</a>
-</p>
-
-<p>
-<a href="https://www.ykm11.phd/">Back to homepage</a>
-</p>
+      <p class="paper-links">
+        <a href="CANDARW2023_submitted_ver.pdf">Download author manuscript (PDF)</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://ieeexplore.ieee.org/document/10409832">View on IEEE Xplore</a>
+      </p>
+    </article>
+  </main>
 </body>
 </html>

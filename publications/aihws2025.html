@@ -1,42 +1,60 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let's Share a Secret: Share-Reduced Design of M&M for the AES S-box</title>
-<meta name="citation_title" content="Let's Share a Secret: Share-Reduced Design of M&M for the AES S-box">
-<meta name="citation_author" content="Haruka Hirata">
-<meta name="citation_author" content="Daiki Miyahara">
-<meta name="citation_author" content="Yuko Hara">
-<meta name="citation_author" content="Kazuo Sakiyama">
-<meta name="citation_author" content="Yang Li">
-<meta name="citation_publication_date" content="2025/10">
-<meta name="citation_conference_title" content="AIHWS Workshop 2025">
-
-<meta name="citation_pdf_url" content="https://www.ykm11.phd/papers/AIHWS2025_accepted_ver.pdf">
-<link rel="canonical" href="https://www.ykm11.phd/publications/aihws2025.html">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let’s Share a Secret: Share-Reduced Design of M&amp;M for the AES S-Box</title>
+  <meta name="description" content="Masks and Macs (M&amp;M), proposed at TCHES 2019, is a powerful countermeasure against physical attacks. This scheme combines masking and circuit duplication with information-theoretic MAC tags. Specifically, masking mitigates side-channel analysis, while circuit redundancy protects against fault analysis. However, it was reported that the AES encryption circuit protected by M&amp;M is vulnerable to zero-value attacks, and an extended countermeasure was proposed to address this issue. Counteracting the attacks is mandatory due to their ease of execution, but this proposed method requires additional circuits to detect faults. While the implementation cost remains reasonable for lower-security-order designs, it becomes considerable for higher-security-order implementations. In this paper, we propose an area-efficient implementation of M&amp;M that reduces the number of shares while preserving its functionality. We focus on the S-box and compare our approach’s security and implementation cost to the original M&amp;M. Furthermore, we discuss the limitations of share reduction in maintaining the security of the original M&amp;M scheme.">
+  <meta name="robots" content="index,follow">
+  <meta name="citation_title" content="Let’s Share a Secret: Share-Reduced Design of M&amp;M for the AES S-Box">
+  <meta name="citation_author" content="Haruka Hirata">
+  <meta name="citation_author" content="Daiki Miyahara">
+  <meta name="citation_author" content="Yuko Hara">
+  <meta name="citation_author" content="Kazuo Sakiyama">
+  <meta name="citation_author" content="Yang Li">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Applied Cryptography and Network Security Workshops (ACNS 2025)">
+  <meta name="citation_firstpage" content="144">
+  <meta name="citation_lastpage" content="160">
+  <meta name="citation_doi" content="10.1007/978-3-032-01799-4_9">
+  <meta name="citation_isbn" content="978-3-032-01799-4">
+  <meta name="citation_online_date" content="2025/10/23">
+  <meta name="citation_volume" content="15653">
+  <meta name="citation_pdf_url" content="https://www.ykm11.phd/publications/AIHWS2025_accepted_ver.pdf">
+  <link rel="canonical" href="https://www.ykm11.phd/publications/aihws2025.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../penguin_32x32.png" type="image/png" sizes="32x32">
 </head>
 <body>
-<h1>Let's Share a Secret: Share-Reduced Design of M&M for the AES S-box</h1>
-<p><strong>Authors:</strong> Haruka Hirata, Daiki Miyahara, Yuko Hara, Kazuo Sakiyama, Yang Li</p>
-<p><strong>Venue:</strong> AIHWS Workshop 2025</p>
-<p><strong>Publication date:</strong> 2025/10</p>
+  <main class="wrap">
+    <article class="paper">
+      <nav class="paper-nav" aria-label="Breadcrumb">
+        <a href="../index.html#conference">← Conference proceedings</a>
+      </nav>
 
-<p>Accepted paper at AIHWS Workshop 2025 (co-located with ACNS), Munich, Germany.</p>
+      <h1 class="citation_title">Let’s Share a Secret: Share-Reduced Design of M&amp;M for the AES S-Box</h1>
+      <h3 class="citation_author">Haruka Hirata, Daiki Miyahara, Yuko Hara, Kazuo Sakiyama, Yang Li</h3>
+      <p class="paper-citation">6th Workshop on Artificial Intelligence in Hardware Security (AIHWS 2025), Munich, Germany, pp. 144–160. DOI: <a href="https://doi.org/10.1007/978-3-032-01799-4_9">10.1007/978-3-032-01799-4_9</a>.</p>
 
+      <dl class="paper-meta">
+        <div><dt>Conference</dt><dd>Applied Cryptography and Network Security Workshops (ACNS 2025)</dd></div>
+        <div><dt>Conference / publication date</dt><dd>Workshop: June 2025; first online: 23 October 2025; cited publication year: 2026</dd></div>
+        <div><dt>Pages</dt><dd>144–160</dd></div>
+          <div><dt>Series volume</dt><dd>Lecture Notes in Computer Science, vol. 15653</dd></div>
+          <div><dt>ISBN</dt><dd>978-3-032-01799-4</dd></div>
+      </dl>
 
-<h2>Abstract</h2>
+      <section aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p>Masks and Macs (M&amp;M), proposed at TCHES 2019, is a powerful countermeasure against physical attacks. This scheme combines masking and circuit duplication with information-theoretic MAC tags. Specifically, masking mitigates side-channel analysis, while circuit redundancy protects against fault analysis. However, it was reported that the AES encryption circuit protected by M&amp;M is vulnerable to zero-value attacks, and an extended countermeasure was proposed to address this issue. Counteracting the attacks is mandatory due to their ease of execution, but this proposed method requires additional circuits to detect faults. While the implementation cost remains reasonable for lower-security-order designs, it becomes considerable for higher-security-order implementations. In this paper, we propose an area-efficient implementation of M&amp;M that reduces the number of shares while preserving its functionality. We focus on the S-box and compare our approach’s security and implementation cost to the original M&amp;M. Furthermore, we discuss the limitations of share reduction in maintaining the security of the original M&amp;M scheme.</p>
+      </section>
 
-<p>
-Masks and Macs (M&amp;M), proposed at TCHES 2019, is a powerful countermeasure against physical attacks. This scheme combines masking and circuit duplication with information-theoretic MAC tags.
-Specifically, masking mitigates side-channel analysis, while circuit redundancy protects against fault analysis.
-However, it was reported that the AES encryption circuit protected by M&amp;M is vulnerable to zero-value attacks, and an extended countermeasure was proposed to address this issue. Counteracting the attacks is mandatory due to their ease of execution, but this proposed method requires additional circuits to detect faults. 
-While the implementation cost remains reasonable for lower-security-order designs, it becomes considerable for higher-security-order implementations.
-In this paper, we propose an area-efficient implementation of M&amp;M that reduces the number of shares while preserving its functionality.
-We focus on the S-box and compare our approach's security and implementation cost to the original M&amp;M. 
-Furthermore, we discuss the limitations of share reduction in maintaining the security of the original M&amp;M scheme.
-</p>
-
-
-<p><a href="https://www.ykm11.phd/papers/AIHWS2025_accepted_ver.pdf">Download PDF</a></p>
-<p><a href="https://www.ykm11.phd/">Back to homepage</a></p>
-</body></html>
+      <p class="paper-links">
+        <a href="AIHWS2025_accepted_ver.pdf">Download author manuscript (PDF)</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-032-01799-4_9">View on Springer</a>
+      </p>
+    </article>
+  </main>
+</body>
+</html>
