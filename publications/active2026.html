@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masked NTT-Multiplication with Fresh Randomness on ML-KEM Decapsulation to Hinder Profiling-based Attacks for Cortex-M4</title>
+  <meta name="robots" content="index,follow">
+  <meta name="citation_title" content="Masked NTT-Multiplication with Fresh Randomness on ML-KEM Decapsulation to Hinder Profiling-based Attacks for Cortex-M4">
+  <meta name="citation_author" content="Haruka Hirata">
+  <meta name="citation_author" content="Daiki Miyahara">
+  <meta name="citation_author" content="Kazuo Sakiyama">
+  <meta name="citation_author" content="Yang Li">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="1st Workshop on Assisted Cryptographic Technologies for Implementation Verification (ACTIVE '26)">
+  <meta name="citation_firstpage" content="27">
+  <meta name="citation_lastpage" content="36">
+  <meta name="citation_doi" content="10.1145/3847162.3849710">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../penguin_32x32.png" type="image/png" sizes="32x32">
+</head>
+<body>
+  <main class="wrap">
+    <article class="paper">
+      <nav class="paper-nav" aria-label="Breadcrumb">
+        <a href="../index.html#conference">← Conference proceedings</a>
+      </nav>
+
+      <h1 class="citation_title">Masked NTT-Multiplication with Fresh Randomness on ML-KEM Decapsulation to Hinder Profiling-based Attacks for Cortex-M4</h1>
+      <h3 class="citation_author">Haruka Hirata, Daiki Miyahara, Kazuo Sakiyama, Yang Li</h3>
+      <p class="paper-citation">1st Workshop on Assisted Cryptographic Technologies for Implementation Verification (ACTIVE '26), pp. 27–36. DOI: <a href="https://doi.org/10.1145/3847162.3849710">10.1145/3847162.3849710</a>.</p>
+
+      <dl class="paper-meta">
+        <div><dt>Conference</dt><dd>1st Workshop on Assisted Cryptographic Technologies for Implementation Verification (ACTIVE '26)</dd></div>
+        <div><dt>Publication year</dt><dd>2026</dd></div>
+        <div><dt>Pages</dt><dd>27–36</dd></div>
+        <div><dt>Publisher</dt><dd>Association for Computing Machinery (ACM)</dd></div>
+      </dl>
+
+      <section aria-labelledby="abstract-heading">
+        <h2 id="abstract-heading">Abstract</h2>
+        <p>NIST standardized CRYSTALS-Kyber as an ML-KEM, a post-quantum key encapsulation mechanism to resist attacks using quantum computers. However, side-channel analysis, which exploits analog leakage from electronic devices, has already broken several implementations. In particular, the Fujisaki-Okamoto transform requires decryption computations that involve the secret key, making counter-measures essential. Although masking-based countermeasures have been proposed, prior work has shown that key recovery may remain possible with a small number of traces, particularly via profiling-based attacks. In this paper, we propose an instruction-level hiding technique for masked multiplication in the NTT domain, referred to as basemul. The method computes a fresh random multiplication within the same instruction as the secret-dependent multiplication, introducing a secret-independent component into the physical leakage without increasing the masking order. Through power analysis experiments on a Cortex-M4 target, we show that the proposed method reduces the tested first-order correlation. Our model-based analysis further estimates a reduction in the signal-to-noise ratio, suggesting that the method may increase the effort required for profiling-based attacks. We further discuss the scheme's limitations against higher-order non-profiling attacks, which remain effective against the proposed method.</p>
+      </section>
+
+      <p class="paper-links">
+        <a href="https://dl.acm.org/doi/10.1145/3847162.3849710">View on ACM Digital Library</a>
+      </p>
+    </article>
+  </main>
+</body>
+</html>
